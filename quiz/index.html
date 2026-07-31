@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Agent 阶段测评</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">AI Agent Interview Guide</p>
+        <h1>阶段掌握度测评</h1>
+      </div>
+      <div class="score-pill" aria-live="polite">
+        <span id="stageScore">未提交</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="stage-nav" aria-label="阶段选择">
+        <img src="../comics/01-什么是Agent.png" alt="AI Agent 学习漫画">
+        <div class="stage-list" id="stageList"></div>
+      </aside>
+
+      <section class="workspace">
+        <div class="stage-head">
+          <div>
+            <p class="eyebrow" id="stageMeta">阶段 1</p>
+            <h2 id="stageTitle">大模型基础</h2>
+          </div>
+          <button class="ghost-button" id="resetStage" type="button">重做本阶段</button>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <span id="progressText">0/0</span>
+        </div>
+
+        <form id="quizForm" class="question-list"></form>
+
+        <section class="result-panel" id="resultPanel" hidden>
+          <h3>评估结果</h3>
+          <p id="resultSummary"></p>
+          <div id="weakPoints" class="weak-points"></div>
+        </section>
+
+        <div class="actions">
+          <button class="primary-button" id="submitQuiz" type="button">提交评估</button>
+          <button class="secondary-button" id="nextStage" type="button">下一阶段</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
